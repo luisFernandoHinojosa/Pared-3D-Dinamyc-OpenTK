@@ -1,0 +1,11 @@
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\obj\Debug\Dynamic-Object-3D.csproj.AssemblyReference.cache
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\obj\Debug\Dynamic-Object-3D.csproj.CoreCompileInputs.cache
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\Dynamic-Object-3D.exe.config
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\Dynamic-Object-3D.exe
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\Dynamic-Object-3D.pdb
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\OpenTK.dll
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\OpenTK.pdb
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\OpenTK.xml
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\obj\Debug\Dynamic-Object-3D.csproj.CopyComplete
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\obj\Debug\Dynamic-Object-3D.exe
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\obj\Debug\Dynamic-Object-3D.pdb
