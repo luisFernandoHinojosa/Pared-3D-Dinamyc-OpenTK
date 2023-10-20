@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OpenTK;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,14 @@ namespace Dynamic_Object_3D
     public class Objecto
     {
         private List<Part> partes;
+        private Vector3 centro;
+   
 
-        public Objecto() 
+        public Objecto(Vector3 centro) 
         {
             partes = new List<Part>();
+            this.centro = centro;
+    
         }
 
         public void addParts(Part part)
@@ -24,7 +29,7 @@ namespace Dynamic_Object_3D
         {
             foreach (var part in partes) 
             {   
-                part.drawPolygons();
+                part.drawPolygons(centro);
             }
         }
     }

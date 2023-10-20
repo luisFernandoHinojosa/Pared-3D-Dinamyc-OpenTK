@@ -16,9 +16,11 @@ namespace Dynamic_Object_3D
             this.color = color;
         }
 
-        public void draw()
+        public void draw(Vector3 centro)
         {
-            //GL.PushMatrix();
+            GL.PushMatrix();
+            GL.Translate(centro + new Vector3(0.1f, -0.5f, -1.7f));
+
             GL.Begin(PrimitiveType.Quads);
             GL.Color4(color: color);
 
@@ -28,7 +30,7 @@ namespace Dynamic_Object_3D
             }
 
             GL.End();
-            //////crncjfrfrftr
+            GL.PopMatrix();
         }
     }
 }
