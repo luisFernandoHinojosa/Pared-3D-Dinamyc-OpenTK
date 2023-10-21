@@ -2,8 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Dynamic_Object_3D
 {
@@ -32,5 +31,31 @@ namespace Dynamic_Object_3D
                 part.drawPolygons(centro);
             }
         }
+
+        public void RotateY(float angle)
+        {
+            foreach (var part in partes)
+            {
+                part.RotateY(angle);
+            }
+        }
+
+        public void Scale(float scale)
+        {
+            foreach (var part in partes)
+            {
+                part.Scale(scale); 
+            }
+        }
+
+        public void Translate(Vector3 translation)
+        {
+            centro += translation;
+            foreach (var part in partes)
+            {
+                part.Translate(translation);
+            }
+        }
+
     }
 }
