@@ -1,8 +1,8 @@
 ﻿using OpenTK;
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Dynamic_Object_3D
 {
@@ -42,6 +42,26 @@ namespace Dynamic_Object_3D
             }
 
             return vertices;
+        }
+
+        public static void SerializarObjeto<T>(T obj, string fileName)
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+            string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
+            File.WriteAllText(filePath, json);
+        }
+
+        public static T DeserializarObjeto<T>(string fileName)
+        {
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+
+            if (File.Exists(filePath))
+            {
+                string json = File.ReadAllText(filePath);
+                return JsonConvert.DeserializeObject<T>(json);
+            }
+
+            return default(T);
         }
 
     }

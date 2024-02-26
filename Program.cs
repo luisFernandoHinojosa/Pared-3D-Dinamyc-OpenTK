@@ -21,6 +21,7 @@ namespace Dynamic_Object_3D
                     Console.WriteLine("1. Rotar");
                     Console.WriteLine("2. Escalar");
                     Console.WriteLine("3. Trasladar");
+                    Console.WriteLine("4. Trasladar Auto x");
                     Console.WriteLine("0. Salir");
 
                     string input = Console.ReadLine();
@@ -39,6 +40,10 @@ namespace Dynamic_Object_3D
                                 break;
                             case 3:
                                 game.isTranslating = true;
+                                game.Run(10);
+                                break;
+                            case 4:
+                                game.isTraslatingCar = true;
                                 game.Run(10);
                                 break;
                             case 0:

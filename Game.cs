@@ -18,6 +18,9 @@ namespace Dynamic_Object_3D
         public bool isRotating = false;
         public bool isScaling = false;
         public bool isTranslating = false;
+        public bool isTraslatingCar = false;
+        Objecto objCar;
+
 
         public Game(int width, int height) : base(width, height, GraphicsMode.Default, "Game"){}
         protected override void OnLoad(EventArgs e)
@@ -52,7 +55,7 @@ namespace Dynamic_Object_3D
             {
                 foreach (var obj in scenary.objetos)
                 {
-                    obj.RotateY((float)e.Time);
+                    obj.Rotate((float)e.Time);
                 }
             }
             else if (isScaling)
@@ -64,12 +67,37 @@ namespace Dynamic_Object_3D
             {
                 foreach (var obj in scenary.objetos)
                 {
-                    Vector3 translation = new Vector3(0.1f, 0.0f, 0.0f); // Mueve en el eje X
+                    Points translation = new Points(-0.1f, 0.0f, 0.0f); // Mueve en el eje X
                     obj.Translate(translation);
                 }
             }
 
-            //angle += (float)e.Time * 20.0f;
+            //angle += (float)e.Time * 40.0f;
+
+            if (isTraslatingCar)
+            {
+                objCar = scenary.selecterObject(2);
+                Points translation = new Points(0.1f, 0.0f, 0.0f); // Mueve en el eje X
+                objCar.Translate(translation);
+               // objCar.RotateRuedas((float)e.Time);
+                //scenary.Update((float)e.Time);
+                //scenary.poli.Rotate(MathHelper.DegreesToRadians(45.0f));
+                int partIdToSelect1 = 1; // El identificador de la parte que deseas seleccionar
+                objCar.SelectPart(partIdToSelect1);
+                objCar.RotateSelectedPart((float)e.Time);
+
+                /*int partIdToSelect2 = 2; // El identificador de la parte que deseas seleccionar
+                objCar.SelectPart(partIdToSelect2);
+                objCar.RotateSelectedPart((float)e.Time);
+
+                int partIdToSelect3 = 3; // El identificador de la parte que deseas seleccionar
+                objCar.SelectPart(partIdToSelect3);
+                objCar.RotateSelectedPart((float)e.Time);
+
+                int partIdToSelect4 = 4; // El identificador de la parte que deseas seleccionar
+                objCar.SelectPart(partIdToSelect4);
+                objCar.RotateSelectedPart((float)e.Time);*/
+            }
 
         }
         protected override void OnRenderFrame(FrameEventArgs e)
@@ -112,9 +140,9 @@ namespace Dynamic_Object_3D
                     isTranslating = true;
                     break;
                 case ' ':
-                    isRotating = false;
-                    isScaling = false;
-                    isTranslating = false;
+                    //isRotating = !isRotating;
+                    isScaling = !isScaling;
+                    //isTranslating = !isTranslating;
                     break;
             }
         }

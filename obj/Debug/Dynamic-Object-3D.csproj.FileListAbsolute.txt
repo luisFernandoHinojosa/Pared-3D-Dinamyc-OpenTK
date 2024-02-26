@@ -27,3 +27,5 @@ D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\System.Text.Enc
 D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\System.Text.Json.xml
 D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\System.ValueTuple.xml
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\Newtonsoft.Json.dll
+D:\Semestre2-23\Programacion grafica\Dynamic-Object-3D\bin\Debug\Newtonsoft.Json.xml
